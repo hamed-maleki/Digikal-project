@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DigiKala Project</title>
+    <link rel="icon" href="media/images/logo.png" type="image/gif" sizes="16x16">
+    <link href="assets/styles/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/styles/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/styles/main.css" rel="stylesheet">
+    <script src="assets/scripts/jquery.min.js"></script>
+    <script src="assets/scripts/inputEmoji.js"></script>
+    <script src="assets/scripts/bootstrap.min.js"></script>
+    <script src="assets/scripts/main.js"></script>
+</header>
+
+<body>
+    <div class="flex-container">
+        <div class="container-fluid general-container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="card contact-list">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <input class="form-control" placeholder="name or phone No">
+                                <i class="fa fa-search"></i>
+                                <hr>
+                            </div>
+                            <div class="col-sm-12">
+                                <ul class="list-group">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <div class="card chat-container hidden">
+                        <div class="chat-header" onclick="showInfo()">
+                            <img class="img-fluid rounded float-left" src="media/images/logo.png">
+                            <span>user name</span>
+                        </div>
+                        <div class="chat-content">
+                        </div>
+                        <div class="chat-actions">
+                            <div class="row">
+                                <div class="col-sm-11 emoji-holder">
+                                    <textarea id="text" class="form-control"></textarea>
+                                </div>
+                                <div class="col-sm-1">
+                                    <button onclick="addingMessage()" class="btn btn-outline-primary">
+                                        <i class="fa fa-send"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="extra-info">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img class="img-fluid rounded float-left" src="media/images/logo.png">
+                    <span>user name</span>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <p>
+                            <i class="fa fa-phone"></i> - <span id="phone"></span>
+                        </p>
+                        <p>
+                            <i class="fa fa-home"></i>- <span id="address"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('textarea').emoji();
+        })
+    </script>
+</body>
+
+</html>

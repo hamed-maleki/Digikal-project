@@ -1,0 +1,86 @@
+{
+    "users":[
+        {
+            "name":"test 1",
+            "pic":"1.png",
+            "lastMessage":"this is message 1",
+            "unreadCount":0,
+            "id":1,
+            "hasMessage":true,
+            "phoneNo":"093800222222",
+            "address":"this is address"
+        },
+        {
+            "name":"test 2",
+            "pic":"2.jpg",
+            "lastMessage":null,
+            "unreadCount":0,
+            "id":2,
+            "hasMessage":false,
+            "phoneNo":"093800222222",
+            "address":"this is address"
+        },
+        {
+            "name":"test 3",
+            "pic":"1.png",
+            "lastMessage":"this is message 3",
+            "unreadCount":1,
+            "id":3,
+            "hasMessage":true,
+            "phoneNo":"093800222222",
+            "address":"this is address"
+        },
+        {
+            "name":"test 4",
+            "pic":"2.jpg",
+            "lastMessage":"this is message 4",
+            "unreadCount":2,
+            "id":4,
+            "hasMessage":true,
+            "phoneNo":"093800222222",
+            "address":"this is address"
+        }
+    ],
+    "messages":[
+        {
+            "userId":1,
+            "details":[
+                {
+                    "type":"get",
+                    "content":[
+                        "this is message 1",
+                        "this is another message"
+                    ]
+                },{
+                    "type":"send",
+                    "content":[
+                        "this is send message"
+                    ]
+                }
+            ]
+        },
+        {
+            "userId":3,
+            "details":[
+                {
+                    "type":"get",
+                    "content":[
+                        "this is message 3"
+                    ]
+                }
+            ]
+        },
+        {
+            "userId":4,
+            "details":[
+                {
+                    "type":"get",
+                    "content":[
+                        "this is message 4",
+                        "test"
+                    ]
+                }
+            ]
+        }
+    ]
+}
